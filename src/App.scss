@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*MIXINS & VARIABLES*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+$primary-color: #ff6060;
+$typographie: "Montserrat", sans-serif;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@mixin display-flex {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* NAVBAR */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar {
+  padding: 30px 50px;
+  @include display-flex;
+  background-color: green;
+
+  &__logo img {
+    width: 150px;
   }
-  to {
-    transform: rotate(360deg);
+  &__links a {
+    text-decoration: none;
+    color: $primary-color;
+    font-family: $typographie;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  &__links__apropos {
+    margin-left: 80px;
+  }
+  &__links__apropos:hover {
+    text-decoration: underline;
+  }
+  &__links__accueil:hover {
+    text-decoration: underline;
+  }
+}
+
+/* HEADER */
+
+.header {
+  padding: 20px 50px;
+  background-color: burlywood;
+
+  &__bloc {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 223px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 1px 2px 2px 1px rgba(14, 14, 14, 0.678);
+  }
+  &__title {
+    position: absolute;
+    top: 60px;
+    right: 31%;
+    color: white;
+    font-family: $typographie;
+    font-weight: 300;
+    font-size: 38px;
   }
 }
