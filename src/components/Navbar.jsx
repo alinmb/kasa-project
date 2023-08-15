@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -8,8 +9,8 @@ const Navbar = () => {
             <img src="./images/kasa-logo.png" alt="Logo représentant l'application web de location immobilière Kasa"/>
         </div>
         <div className='navbar__links'>
-            <a href='#' className='navbar__links__accueil'>Accueil</a>
-            <a href='#' className='navbar__links__apropos'>A propos</a>
+            <Link to='/' className='navbar__links__accueil'>Accueil</Link>
+            <Link to='/about' className='navbar__links__apropos'>A propos</Link>
         </div>
     </nav>
   )
