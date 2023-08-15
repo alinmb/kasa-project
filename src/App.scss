@@ -1,40 +1,61 @@
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100%;
-}
-
 /*MIXINS & VARIABLES*/
 
 $primary-color: #ff6060;
 $typographie: "Montserrat", sans-serif;
 
-@mixin display-flex {
+@mixin display-flex-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@mixin display-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: $typographie;
 }
 
 /* NAVBAR */
 
 .navbar {
   padding: 30px 50px;
-  @include display-flex;
-  background-color: green;
+  @include display-flex-between;
+
+  @media screen and (max-width: 768px){
+    padding: 20px;
+  }
 
   &__logo img {
     width: 150px;
+
+    @media screen and (max-width: 768px) {
+      width: 120px;
+    }
   }
   &__links a {
     text-decoration: none;
     color: $primary-color;
-    font-family: $typographie;
     font-size: 20px;
     cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
   }
   &__links__apropos {
     margin-left: 80px;
+    
+    @media screen and (max-width: 768px) {
+      margin-left: 20px;
+    }
   }
   &__links__apropos:hover {
     text-decoration: underline;
@@ -47,27 +68,48 @@ $typographie: "Montserrat", sans-serif;
 /* HEADER */
 
 .header {
-  padding: 20px 50px;
-  background-color: burlywood;
+  background-image: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.199), rgba(0, 0, 0, 0.445)),
+    url('../public/images/kasa-banner.png');
+  background-position: center;
+  background-size: cover;
+  width: 88%;
+  height: 223px;
+  border-radius: 20px;
+  margin: 0 auto;
+  @include display-flex-center;
+  padding: 0 50px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.699);
 
-  &__bloc {
-    position: relative;
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    height: 111px;
+    padding: 0;
+    justify-content: start;
+    border-radius: 10px;
   }
 
-  &__img {
-    width: 100%;
-    height: 223px;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 1px 2px 2px 1px rgba(14, 14, 14, 0.678);
-  }
   &__title {
-    position: absolute;
-    top: 60px;
-    right: 31%;
     color: white;
-    font-family: $typographie;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 38px;
+    display: block;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+      font-size: 20px;
+    }
+  }
+  &__title2 {
+    color: white;
+    font-weight: 400;
+    font-size: 38px;
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      margin-left: 10px;
+      display: flex;
+    }
   }
 }

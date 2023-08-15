@@ -3,14 +3,8 @@ import React from "react";
 const Header = () => {
   return (
     <header className="header">
-      <div className="header__bloc">
-        <img
-          className="header__img"
-          src="./images/kasa-banner.png"
-          alt="Bannière de l'application web de location immobilière Kasa"
-        />
-        <h1 className="header__title">Chez vous, partout et ailleurs</h1>
-      </div>
+        <h1 className="header__title">Chez vous, partout et ailleurs</h1>  
+        <h1 className="header__title2">Chez vous,<br/> partout et ailleurs</h1>  
     </header>
   );
 };
