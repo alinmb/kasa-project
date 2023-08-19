@@ -1,13 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const Appartments = () => {
+const Apartments = (props) => {
   return (
-    <div className='apartments'>
-        <div className='apartments__card'>
-          <p className='apartments__title'>Titre de la <br/> location</p>
-        </div>
+    <div className="apartments__card">
+      <img src={props.cover} alt="Couverture représentant un appartement" />
+      <p className="apartments__card__title">{props.title}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Appartments
+export default Apartments;
