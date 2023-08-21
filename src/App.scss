@@ -25,7 +25,7 @@ body {
 /* NAVBAR */
 
 .navbar {
-  padding: 30px 50px;
+  padding: 30px 150px;
   @include display-flex-between;
 
   @media screen and (max-width: 768px) {
@@ -78,9 +78,9 @@ body {
   background-size: cover;
   height: 223px;
   border-radius: 20px;
-  margin: 0 50px;
+  margin: 0 150px;
   @include display-flex-center;
-  padding: 0 50px;
+  padding: 0 150px;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.699);
 
   @media screen and (max-width: 768px) {
@@ -122,7 +122,7 @@ body {
 .apartments {
   background-color: #f6f6f6;
   border-radius: 20px;
-  margin: 50px 50px;
+  margin: 50px 150px;
   padding: 40px 40px;
   height: 700px;
   display: grid;
@@ -189,6 +189,7 @@ body {
 /* FOOTER */
 
 .footer {
+  margin: 0 150px;
   background-color: black;
   display: flex;
   height: 170px;
@@ -199,6 +200,7 @@ body {
   @media screen and (max-width: 768px) {
     height: 109px;
     width: 100%;
+    margin: 0 0;
   }
 
   &__img {
