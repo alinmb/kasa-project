@@ -73,7 +73,7 @@ body {
       rgba(0, 0, 0, 0.199),
       rgba(0, 0, 0, 0.445)
     ),
-    url("../public/images/kasa-banner.png");
+    url("../src/images/kasa-banner.png");
   background-position: center;
   background-size: cover;
   height: 223px;
@@ -225,12 +225,12 @@ body {
 
 /*ABOUT PAGE*/
 .about__img {
-  background-image: url(../public/images/kasa-banner-a-propos.png);
+  background-image: url(../src/images/kasa-banner-a-propos.png);
   background-position: center;
   background-size: cover;
   height: 223px;
   border-radius: 20px;
-  margin: 30px 50px;
+  margin: 30px 150px;
   @include display-flex-center;
   padding: 0 50px;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.699);
@@ -241,5 +241,106 @@ body {
     margin: 10px 20px;
     padding: 0;
     border-radius: 10px;
+  }
+}
+
+/*ACCORDION*/
+
+.accordion {
+  margin: 20px 150px;
+
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__header {
+    background-color: red;
+    width: 70%;
+  }
+  &__header p {
+    font-weight: bold;
+  }
+  &__header span {
+    cursor: pointer;
+  }
+  &__content {
+    background-color: lightseagreen;
+    width: 70%;
+    height: auto;
+    opacity: 1;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+  }
+  &__content__hide {
+    background-color: lightseagreen;
+    width: 70%;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+  }
+  &__content p {
+    font-weight: bold;
+  }
+}
+
+/*ERROR PAGE*/
+
+.error {
+  height: 100vh;
+  &__bloc {
+    height: 75vh;
+    margin: 0 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      padding: 0 20px;
+      height: 77vh;
+      margin: 0;
+    }
+  }
+  &__title {
+    color: $primary-color;
+    font-size: 278px;
+    font-weight: 700;
+    margin: 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: 96px;
+      margin: 50px 0;
+    }
+  }
+  &__desc {
+    color: $primary-color;
+    font-size: 26px;
+    font-weight: 500;
+    margin: 60px 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      margin: 50px 0;
+      text-align: center;
+    }
+  }
+  &__return {
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 60px 0;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }

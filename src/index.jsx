@@ -6,11 +6,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import About from "./pages/About";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
   },
   {
     path: "/about",
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/404",
-    element: <h1>404 ERREUR test</h1>,
+    element: <Error />,
   },
 ]);
 
