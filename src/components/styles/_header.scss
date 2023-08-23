@@ -1,0 +1,51 @@
+/* HEADER */
+
+.header {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.199),
+      rgba(0, 0, 0, 0.445)
+    ),
+    url("/images/kasa-banner.png");
+  background-position: center;
+  background-size: cover;
+  height: 223px;
+  border-radius: 20px;
+  margin: 0 150px;
+  @include display-flex-center;
+  padding: 0 150px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.699);
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    height: 111px;
+    margin: 0 20px;
+    padding: 0;
+    justify-content: start;
+    border-radius: 10px;
+  }
+
+  &__title {
+    color: white;
+    font-weight: 400;
+    font-size: 38px;
+    display: block;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+      font-size: 20px;
+    }
+  }
+  &__title2 {
+    color: white;
+    font-weight: 400;
+    font-size: 38px;
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      margin-left: 10px;
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+/* APARTMENTS*/
+
+.apartments {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  margin: 50px 150px;
+  padding: 40px 40px;
+  // height: 700px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto auto;
+  column-gap: 0px;
+  row-gap: 30px;
+  // overflow: auto;
+
+  @media screen and (max-width: 768px) {
+    margin: 10px 20px;
+    row-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px 0;
+  }
+}
+
+/* RETRAIT SCROLLBAR SUR LE CONTAINER QUI CONTIENT LES CARTES*/
+.apartments::-webkit-scrollbar {
+  width: 0px;
+}
+
+.apartments__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  & img {
+    border-radius: 5px;
+    width: 80%;
+    height: 340px;
+    object-fit: cover;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      height: 255px;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 70px;
+    width: 50%;
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    text-shadow: 1px 1px 2px black;
+
+    @media screen and (max-width: 768px) {
+      bottom: -10px;
+      left: 15px;
+    }
+  }
+}
