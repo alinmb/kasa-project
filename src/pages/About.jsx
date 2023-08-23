@@ -41,7 +41,6 @@ const About = () => {
       <Navbar />
       <HeaderAbout />
       <div className="about__bloc">{accordion}</div>
-
       <Footer />
     </div>
   );

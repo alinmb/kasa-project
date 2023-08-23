@@ -7,6 +7,7 @@ import "./index.css";
 import App from "./App";
 import About from "./pages/About";
 import Error from "./pages/Error";
+import Apartment from "./pages/Apartment";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/apartment",
+    element: <Apartment />,
   },
   {
     path: "/404",

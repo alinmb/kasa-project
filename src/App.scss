@@ -19,13 +19,19 @@ body {
 /*ABOUT PAGE*/
 
 .about {
-  height: 100vh;
+  height: auto;
   width: 100%;
   position: relative;
 }
 
 .about > .footer {
   margin-top: 110px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 0px;
+    position: absolute;
+    bottom: -270px;
+  }
 }
 
 .about__img {
@@ -52,32 +58,55 @@ body {
 
 .about__bloc {
   margin: 100px 0 0 0;
+
+  @media screen and (max-width: 768px) {
+    margin: 30px 0 0 0;
+  }
 }
 .accordion {
   margin: 20px 150px;
-
-  background-color: green;
+  color: white;
+  // background-color: green;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 20px 0;
+  }
 
   &__title {
+    height: 34px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: red;
+    background-color: $primary-color;
     width: 70%;
-    padding: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px 5px 3px 3px;
+
+    @media screen and (max-width: 768px) {
+      width: 85%;
+    }
+  }
+  &__title h4 {
+    margin: 0;
+  }
+  &__title img {
+    width: 22px;
   }
   &__content {
     padding: 0 10px;
-    background-color: lightseagreen;
+    color: $primary-color;
+    background-color: #f6f6f6;
     width: 70%;
     height: auto;
     opacity: 1;
     overflow: hidden;
-    transition: all 0.6s ease-in-out;
+    @media screen and (max-width: 768px) {
+      width: 85%;
+    }
   }
   &__content__hide {
     background-color: lightseagreen;
@@ -85,6 +114,14 @@ body {
     height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.6s ease-in-out;
   }
 }
+
+// @keyframes rotation {
+//   from {
+//     transform: rotate(0);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

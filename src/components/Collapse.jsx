@@ -1,29 +1,27 @@
 import React from "react";
 import { useState } from "react";
+import arrowDown from "../images/down.png";
+import arrowUp from "../images/up.png";
 
 const Collapse = (props) => {
-  const [isActive, setIsActive] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   function showContent() {
-    setIsActive((prevState) => {
+    setIsVisible((prevState) => {
       return !prevState;
     });
   }
 
   return (
-    <div className="test">
-      <div className="accordion">
-        <div className="accordion__title" onClick={showContent}>
-          <h4>{props.title}</h4>
-          <div>V</div>
-        </div>
-        <div
-          className={
-            isActive ? "accordion__content" : "accordion__content_hide"
-          }
-        >
-          {isActive && <p>{props.content}</p>}
-        </div>
+    <div className="accordion">
+      <div className="accordion__title" onClick={showContent}>
+        <h4>{props.title}</h4>
+        <img src={!isVisible ? arrowUp : arrowDown} alt="Flèche" />
+      </div>
+      <div
+        className={isVisible ? "accordion__content" : "accordion__content_hide"}
+      >
+        {isVisible && <p>{props.content}</p>}
       </div>
     </div>
   );
