@@ -1,6 +1,6 @@
 import React from "react";
 
-const Apartments = (props) => {
+const Card = (props) => {
   return (
     <div className="apartments__card">
       <img src={props.cover} alt="Couverture représentant un appartement" />
@@ -9,4 +9,4 @@ const Apartments = (props) => {
   );
 };
 
-export default Apartments;
+export default Card;

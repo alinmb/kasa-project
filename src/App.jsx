@@ -1,7 +1,7 @@
 import "./App.scss";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
-import Apartments from "./components/Apartments";
+import Card from "./components/Card";
 import Footer from "./components/Footer";
 import dataApartments from "./assets/annonces.json";
 
@@ -10,9 +10,7 @@ function App() {
   // const apartementElements = sliceedData.map((apart) =>
 
   const apartementElements = dataApartments.map((apart) => {
-    return (
-      <Apartments cover={apart.cover} title={apart.title} key={apart.id} />
-    );
+    return <Card cover={apart.cover} title={apart.title} key={apart.id} />;
   });
 
   return (

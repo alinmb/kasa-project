@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeaderAbout from "../components/HeaderAbout";
-import Accordion from "../components/Accordion";
+import Collapse from "../components/Collapse";
 // import { useState } from "react";
 
 const About = () => {
@@ -34,15 +34,14 @@ const About = () => {
   ];
 
   const accordion = data.map((item) => {
-    return (
-      <Accordion title={item.title} content={item.content} key={item.id} />
-    );
+    return <Collapse title={item.title} content={item.content} key={item.id} />;
   });
   return (
     <div className="about">
       <Navbar />
       <HeaderAbout />
-      {accordion}
+      <div className="about__bloc">{accordion}</div>
+
       <Footer />
     </div>
   );
