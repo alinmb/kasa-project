@@ -3,6 +3,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 // import data from "../assets/annonces.json";
 import Collapse from "../components/Collapse";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 
 const Apartment = () => {
   return (
@@ -31,11 +34,21 @@ const Apartment = () => {
             Dumas
           </p>
           <div className="annonce__owner__rating">
-            <span>X</span>
-            <span>X</span>
-            <span>X</span>
-            <span>X</span>
-            <span>X</span>
+            <span>
+              <FontAwesomeIcon icon={faStar} />
+            </span>
+            <span>
+              <FontAwesomeIcon icon={faStar} />
+            </span>
+            <span>
+              <FontAwesomeIcon icon={faStar} />
+            </span>
+            <span>
+              <FontAwesomeIcon icon={farStar} />
+            </span>
+            <span>
+              <FontAwesomeIcon icon={farStar} />
+            </span>
           </div>
         </div>
       </div>
