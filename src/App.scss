@@ -3,6 +3,7 @@
 @import "./components/styles/card";
 @import "./components/styles/mixins_variables";
 @import "./pages/error";
+@import "./pages/about";
 
 html,
 body {
@@ -15,44 +16,6 @@ body {
 }
 
 /*******************************************************/
-
-/*ABOUT PAGE*/
-
-.about {
-  height: auto;
-  width: 100%;
-  position: relative;
-}
-
-.about > .footer {
-  margin-top: 110px;
-
-  @media screen and (max-width: 768px) {
-    margin-top: 0px;
-    position: absolute;
-    bottom: -270px;
-  }
-}
-
-.about__img {
-  background-image: url(../src/images/kasa-banner-a-propos.png);
-  background-position: center;
-  background-size: cover;
-  height: 223px;
-  border-radius: 20px;
-  margin: 30px 150px;
-  @include display-flex-center;
-  padding: 0 50px;
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.699);
-
-  @media screen and (max-width: 768px) {
-    margin-top: 20px;
-    height: 223px;
-    margin: 10px 20px;
-    padding: 0;
-    border-radius: 10px;
-  }
-}
 
 /*ACCORDION*/
 

@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import "./index.css";
 import App from "./App";
 import About from "./pages/About";
 import Error from "./pages/Error";
@@ -24,7 +23,7 @@ const router = createBrowserRouter([
     element: <Apartment />,
   },
   {
-    path: "/404",
+    path: "*",
     element: <Error />,
   },
 ]);

@@ -1,12 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
   return (
-    <div className="apartments__card">
+    <Link to="apartment" className="apartments__card">
       <img src={props.cover} alt="Couverture représentant un appartement" />
       <p className="apartments__card__title">{props.title}</p>
-    </div>
+    </Link>
   );
 };
 
 export default Card;
+
+/*<Link to={`/apartment/${props.id}`} className="apartments__card">
+<img src={props.cover} alt="Couverture représentant un appartement" />
+<p className="apartments__card__title">{props.title}</p>
+</Link>*/

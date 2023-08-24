@@ -28,6 +28,9 @@
       text-transform: uppercase;
     }
   }
+  &__links a.active {
+    text-decoration: underline;
+  }
   &__links__apropos {
     margin-left: 80px;
 

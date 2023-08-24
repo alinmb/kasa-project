@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
 import dataApartments from "./assets/annonces.json";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function App() {
   // const sliceedData = dataApartments.slice(0, 6);
@@ -18,9 +18,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Header />
-      <Link to="/apartment" className="apartments">
-        {apartementElements}
-      </Link>
+      <div className="apartments">{apartementElements}</div>
       <Footer />
     </div>
   );

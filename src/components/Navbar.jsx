@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import LogoKasa from "../images/kasa-logo.png";
 
 const Navbar = () => {
@@ -12,12 +12,16 @@ const Navbar = () => {
         />
       </div>
       <div className="navbar__links">
-        <Link to="/" className="navbar__links__accueil">
+        <NavLink
+          to="/"
+          className={`navbar__links__accueil ${({ isActive }) =>
+            isActive ? "active" : ""}`}
+        >
           Accueil
-        </Link>
-        <Link to="/about" className="navbar__links__apropos">
+        </NavLink>
+        <NavLink to="/about" className="navbar__links__apropos">
           A propos
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
