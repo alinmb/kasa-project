@@ -13,7 +13,7 @@ const Collapse = (props) => {
   }
 
   return (
-    <div className="accordion">
+    <div className={`accordion ${props.customClass}`}>
       <div className="accordion__title" onClick={showContent}>
         <h4>{props.title}</h4>
         <img src={!isVisible ? arrowUp : arrowDown} alt="Flèche" />
