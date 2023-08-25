@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HeaderAbout from "../components/HeaderAbout";
 import Collapse from "../components/Collapse";
-// import { useState } from "react";
 
 const About = () => {
   const data = [

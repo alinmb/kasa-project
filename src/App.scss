@@ -91,7 +91,7 @@ body {
 
 /******************************************/
 
-/*APARTEMENT ANNONCE*/
+/*ANNONCES APPARTEMENTS*/
 
 .annonce {
   color: $primary-color;
@@ -105,6 +105,7 @@ body {
     width: 100%;
     height: 415px;
     object-fit: cover;
+    border-radius: 10px;
   }
   &__split {
     display: flex;
@@ -127,20 +128,28 @@ body {
   }
   &__tags {
     display: flex;
+    align-items: center;
     gap: 20px;
+    cursor: pointer;
   }
   &__tags p {
     background-color: $primary-color;
     color: white;
-    width: 115px;
+    width: auto;
     text-align: center;
-    padding: 2px 4px;
+    padding: 5px 10px;
     border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
   }
   &__owner {
     margin: 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__owner p {
+    width: 30px;
   }
   &__accordion {
     width: 100%;
@@ -159,5 +168,5 @@ body {
 .custom-collapse-2 {
   width: 100%;
   padding: 0;
-  margin: 0 35px 0 0;
+  margin: 0 45px 0 0;
 }
