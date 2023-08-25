@@ -14,8 +14,14 @@ const ApartmentPage = (props) => {
       </div>
 
       <div className="annonce__owner">
-        <p>{props.name}</p>
-        {/* <img src={props.picture} /> */}
+        <div className="annonce__owner__p1">
+          <p>{props.name}</p>
+          <img
+            src={props.picture}
+            className="annonce__owner__pic"
+            alt={`Représentation de ${props.name} qui possède le bien.`}
+          />
+        </div>
 
         <div className="annonce__owner__rating">
           <span>

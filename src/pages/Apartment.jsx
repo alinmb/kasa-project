@@ -27,7 +27,7 @@ const Apartment = () => {
         location={annonce.location}
         tags={annonce.tags}
         name={annonce.host.name}
-        // picture={annonce.picture}
+        picture={annonce.host.picture}
       />
       <div className="annonce__accordion">
         <Collapse
