@@ -3,18 +3,22 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import data from "../assets/annonces.json";
 import Collapse from "../components/Collapse";
+import Error from "./Error";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faStar } from "@fortawesome/free-solid-svg-icons";
 // import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
-import ApartmentPage from "../components/ApartmentPage";
-import { useLocation } from "react-router-dom";
+import Annonces from "../components/Annonces";
+
+import { useParams } from "react-router-dom";
 
 const Apartment = () => {
-  const loc = useLocation();
-  // console.log(loc);
+  const { id } = useParams();
 
-  const annonce = data.find((da) => da.id === loc.state);
-  // console.log(annonce);
+  const annonce = data.find((da) => da.id === id);
+
+  if (annonce === undefined) {
+    return <Error />;
+  }
 
   return (
     <div className="annonce">
@@ -22,7 +26,7 @@ const Apartment = () => {
       <div className="annonce__img">
         <img src={annonce.pictures[0]} alt={annonce.title} />
       </div>
-      <ApartmentPage
+      <Annonces
         title={annonce.title}
         location={annonce.location}
         tags={annonce.tags}
