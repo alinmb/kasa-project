@@ -8,6 +8,7 @@ import Error from "./Error";
 // import { faStar } from "@fortawesome/free-solid-svg-icons";
 // import { faStar as farStar } from "@fortawesome/free-regular-svg-icons";
 import Annonces from "../components/Annonces";
+// import Carousel from "../components/Carousel";
 
 import { useParams } from "react-router-dom";
 
@@ -23,9 +24,11 @@ const Apartment = () => {
   return (
     <div className="annonce">
       <Navbar />
+
       <div className="annonce__img">
         <img src={annonce.pictures[0]} alt={annonce.title} />
       </div>
+
       <Annonces
         title={annonce.title}
         location={annonce.location}
@@ -34,6 +37,7 @@ const Apartment = () => {
         picture={annonce.host.picture}
         rating={annonce.rating}
       />
+
       <div className="annonce__accordion">
         <Collapse
           title="Déscription"

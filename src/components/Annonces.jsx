@@ -26,13 +26,13 @@ const Annonces = (props) => {
         </div>
 
         <div className="annonce__owner__rating">
-          {range.map((rangeElem) =>
+          {range.map((rangeElem, index) =>
             parseInt(props.rating) >= rangeElem ? (
-              <span>
+              <span key={index}>
                 <i className="fa-solid fa-star"></i>
               </span>
             ) : (
-              <span>
+              <span key={index}>
                 <i className="fa-regular fa-star"></i>
               </span>
             )
