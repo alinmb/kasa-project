@@ -1,6 +1,8 @@
 import React from "react";
 
-const ApartmentPage = (props) => {
+const Annonces = (props) => {
+  const range = [1, 2, 3, 4, 5];
+
   return (
     <div className="annonce__split">
       <div className="annonce__title">
@@ -24,7 +26,18 @@ const ApartmentPage = (props) => {
         </div>
 
         <div className="annonce__owner__rating">
-          <span>
+          {range.map((rangeElem) =>
+            parseInt(props.rating) >= rangeElem ? (
+              <span>
+                <i className="fa-solid fa-star"></i>
+              </span>
+            ) : (
+              <span>
+                <i className="fa-regular fa-star"></i>
+              </span>
+            )
+          )}
+          {/* <span>
             <i className="fa-solid fa-star"></i>
           </span>
           <span>
@@ -38,11 +51,11 @@ const ApartmentPage = (props) => {
           </span>
           <span>
             <i className="fa-regular fa-star"></i>
-          </span>
+          </span> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default ApartmentPage;
+export default Annonces;
