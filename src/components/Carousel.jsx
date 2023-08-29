@@ -7,11 +7,19 @@ const Carousel = (props) => {
   const [actualSlide, setActualSlide] = useState(0);
 
   const nextSlide = () => {
-    setActualSlide((prevPic) => prevPic + 1);
+    if (actualSlide === props.pictures.length - 1) {
+      setActualSlide(0);
+    } else {
+      setActualSlide((prevPic) => prevPic + 1);
+    }
   };
 
   const prevSlide = () => {
-    setActualSlide((prevPic) => prevPic - 1);
+    if (actualSlide === 0) {
+      setActualSlide(props.pictures.length - 1);
+    } else {
+      setActualSlide((prevPic) => prevPic - 1);
+    }
   };
 
   return (
@@ -21,18 +29,27 @@ const Carousel = (props) => {
         src={props.pictures[actualSlide]}
         alt={props.title}
       />
-      <img
-        className="caroussel__left"
-        src={leftArrow}
-        onClick={prevSlide}
-        alt="button left arrow"
-      />
-      <img
-        className="caroussel__right"
-        src={rightArrow}
-        onClick={nextSlide}
-        alt="button right arrow"
-      />
+      {props.pictures.length > 1 && (
+        <img
+          className="caroussel__left"
+          src={leftArrow}
+          onClick={prevSlide}
+          alt="button left arrow"
+        />
+      )}
+      {props.pictures.length > 1 && (
+        <img
+          className="caroussel__right"
+          src={rightArrow}
+          onClick={nextSlide}
+          alt="button right arrow"
+        />
+      )}
+      {props.pictures.length > 1 && (
+        <p className="caroussel__actualSlide">
+          {actualSlide + 1}/{props.pictures.length}
+        </p>
+      )}
     </div>
   );
 };

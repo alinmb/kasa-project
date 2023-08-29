@@ -218,4 +218,10 @@ body {
     background-color: blue;
     right: 0;
   }
+  &__actualSlide {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+  }
 }
