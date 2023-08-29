@@ -95,18 +95,6 @@ body {
 
 .annonce {
   color: $primary-color;
-  &__img {
-    margin: 50px 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &__img img {
-    width: 100%;
-    height: 415px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
   &__split {
     display: flex;
     align-items: center;
@@ -194,4 +182,40 @@ body {
   width: 100%;
   padding: 0;
   margin: 0 45px 0 0;
+}
+
+// .annonces__leftArrow {
+//   background-color: red;
+//   position: absolute;
+//   width: 20px;
+//   left: 0;
+// }
+
+/*************/
+
+/*CAROUSEL*/
+
+.caroussel {
+  margin: 50px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__slider {
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  &__left {
+    position: absolute;
+    background-color: red;
+    left: 0;
+  }
+  &__right {
+    position: absolute;
+    background-color: blue;
+    right: 0;
+  }
 }
