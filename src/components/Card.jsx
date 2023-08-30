@@ -15,8 +15,3 @@ const Card = (props) => {
 };
 
 export default Card;
-
-/*<Link to={`/apartment/${props.id}`} className="apartments__card">
-<img src={props.cover} alt="Couverture représentant un appartement" />
-<p className="apartments__card__title">{props.title}</p>
-</Link>*/

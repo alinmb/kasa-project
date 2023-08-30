@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import About from "./pages/About";
 import Error from "./pages/Error";
-import Apartment from "./pages/Apartment";
+import Logement from "./pages/Logement";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/apartment/:id",
-    element: <Apartment />,
+    element: <Logement />,
   },
   {
     path: "*",

@@ -1,0 +1,54 @@
+import React from "react";
+import { useParams } from "react-router-dom";
+
+import dataLogements from "../assets/data.json";
+
+import Navbar from "../components/Navbar";
+import Carousel from "../components/Carousel";
+import Annonces from "../components/Annonces";
+import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
+import Error from "./Error";
+
+const Logement = () => {
+  const { id } = useParams();
+  const annonces = dataLogements.find((annonce) => annonce.id === id);
+
+  if (annonces === undefined) {
+    return <Error />;
+  }
+
+  return (
+    <div className="annonce">
+      <Navbar />
+      <Carousel pictures={annonces.pictures} />
+      <Annonces
+        title={annonces.title}
+        location={annonces.location}
+        tags={annonces.tags}
+        name={annonces.host.name}
+        picture={annonces.host.picture}
+        rating={annonces.rating}
+      />
+
+      <div className="annonce__accordion">
+        <Collapse
+          title="Description"
+          content={annonces.description}
+          customClass="custom-collapse-1"
+        />
+        <Collapse
+          title="Equipements"
+          content={annonces.equipments.map((equip, index) => {
+            return <li key={index}>{equip}</li>;
+          })}
+          customClass="custom-collapse-2"
+        />
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Logement;
