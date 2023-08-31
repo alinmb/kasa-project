@@ -11,14 +11,14 @@ const Collapse = (props) => {
     });
   }
 
-  const mountedStyle = { animation: "inAnimation 250ms ease-in" };
+  const mountedStyle = { animation: "inAnimation 0.5s ease-in-out" };
   const unmountedStyle = {
-    animation: "outAnimation 270ms ease-out",
+    animation: "outAnimation 0.5s ease-in-out",
   };
 
   const rotateOpen = {
     transform: isVisible ? "rotate(-180deg)" : "",
-    transition: "transform 250ms ease",
+    transition: "transform 0.5s ease-in-out",
   };
 
   return (
