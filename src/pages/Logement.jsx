@@ -38,9 +38,13 @@ const Logement = () => {
           customClass="custom-collapse-1"
         />
         <Collapse
-          title="Equipements"
+          title="Équipements"
           content={annonces.equipments.map((equip, index) => {
-            return <li key={index}>{equip}</li>;
+            return (
+              <li style={{ listStyle: "none" }} key={index}>
+                {equip}
+              </li>
+            );
           })}
           customClass="custom-collapse-2"
         />

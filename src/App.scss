@@ -35,6 +35,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   @media screen and (max-width: 768px) {
     width: 100%;
     margin: 20px 0;
@@ -66,30 +67,33 @@ body {
     background-color: #f6f6f6;
     width: 70%;
     height: auto;
-    opacity: 1;
     overflow: hidden;
     @media screen and (max-width: 768px) {
       width: 85%;
     }
   }
-  &__content__hide {
-    background-color: lightseagreen;
-    width: 0;
-    height: 0;
+}
+
+@keyframes inAnimation {
+  0% {
     opacity: 0;
-    overflow: hidden;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-// @keyframes rotation {
-//   from {
-//     transform: rotate(0);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
-
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 /******************************************/
 
 /*PAGE ANNONCE LOGEMENTS*/
