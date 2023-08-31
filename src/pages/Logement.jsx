@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 
 import dataLogements from "../assets/data.json";
 
@@ -8,14 +8,13 @@ import Carousel from "../components/Carousel";
 import Annonces from "../components/Annonces";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
-import Error from "./Error";
 
 const Logement = () => {
   const { id } = useParams();
   const annonces = dataLogements.find((annonce) => annonce.id === id);
 
   if (annonces === undefined) {
-    return <Error />;
+    return <Navigate replace to="/error" />;
   }
 
   return (
