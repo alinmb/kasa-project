@@ -30,15 +30,15 @@ const Carousel = (props) => {
   };
 
   return (
-    <div className="caroussel">
+    <div className="carousel">
       <img
-        className="caroussel__slider"
+        className="carousel__slider"
         src={props.pictures[actualSlide]}
         alt={props.title}
       />
       {props.pictures.length > 1 && (
         <img
-          className="caroussel__left"
+          className="carousel__left"
           src={leftArrow}
           onClick={prevSlide}
           alt="Bouton représentant une flèche gauche qui permet de voir la slide précedente"
@@ -46,14 +46,14 @@ const Carousel = (props) => {
       )}
       {props.pictures.length > 1 && (
         <img
-          className="caroussel__right"
+          className="carousel__right"
           src={rightArrow}
           onClick={nextSlide}
           alt="Bouton représentant une flèche droite qui permet de voir la slide suivante"
         />
       )}
       {props.pictures.length > 1 && (
-        <p className="caroussel__actualSlide">
+        <p className="carousel__actualSlide">
           {actualSlide + 1}/{props.pictures.length}
         </p>
       )}
