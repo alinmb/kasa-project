@@ -80,7 +80,7 @@
   @include display-flex-center;
   padding: 0 50px;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.699);
-  animation: scaledBanner 1s ease-in-out 0.2s forwards;
+  animation: scaledBanner 1s ease-in-out 0.1s forwards;
   transform: scale(0);
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
