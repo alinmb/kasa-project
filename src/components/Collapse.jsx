@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import arrowUp from "../images/up.png";
 
 const Collapse = (props) => {
@@ -11,8 +11,8 @@ const Collapse = (props) => {
     });
   }
 
-  const mountedStyle = { animation: "inAnimation 0.5s ease-in-out" };
-  const unmountedStyle = {
+  const fadeIn = { animation: "inAnimation 0.5s ease-in-out" };
+  const fadeOut = {
     animation: "outAnimation 0.5s ease-in-out",
   };
 
@@ -27,10 +27,7 @@ const Collapse = (props) => {
         <h4>{props.title}</h4>
         <img src={arrowUp} alt="Flèche" style={rotateOpen} />
       </div>
-      <div
-        className="accordion__content"
-        style={isVisible ? mountedStyle : unmountedStyle}
-      >
+      <div className="accordion__content" style={isVisible ? fadeIn : fadeOut}>
         {isVisible && <p>{props.content}</p>}
       </div>
     </div>
