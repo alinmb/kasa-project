@@ -74,13 +74,14 @@ body {
 }
 
 @keyframes inAnimation {
-  0% {
+  from {
+    transform: translateY(-10%);
     opacity: 0;
-    visibility: hidden;
   }
-  100% {
+
+  to {
+    transform: translateY(0);
     opacity: 1;
-    visibility: visible;
   }
 }
 

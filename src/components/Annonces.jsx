@@ -28,7 +28,7 @@ const Annonces = (props) => {
         </div>
         {/* Ce bloc display la note du logement. */}
         <div className="annonce__owner__rating">
-          {/* Je map dans mon tableau, efin de créer 5 étoiles. 
+          {/* Je map dans mon tableau, afin de créer 5 étoiles. 
           Pour chaque étoile la condition détermine si l'étoile sera solid ou regular en fonction de la note récupéré dans le fichier JSON. */}
           {range.map((rangeElem, index) => (
             <span key={index}>
